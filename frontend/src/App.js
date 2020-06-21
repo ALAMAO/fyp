@@ -18,9 +18,9 @@ export default function App(props) {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/preview" component={Preview} />
           <Route path="/output/:imageHash" component={Output} />
           <Route path="/" component={Upload} />
-          <Route path="/preview" component={Preview} />
         </Switch>
       </Router>
     </div>

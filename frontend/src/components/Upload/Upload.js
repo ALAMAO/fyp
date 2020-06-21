@@ -19,7 +19,6 @@ export default class Upload extends Component {
   }
 
   render() {
-    console.log(PSD);
     let dropZone = (
       <Dropzone
         onDropAccepted={this.onDrop}
