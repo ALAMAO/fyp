@@ -103,7 +103,7 @@
   height: 0;
 }
 
-img {
+.uploadImage {
   opacity: 0.3;
   width: 50px
 }
@@ -188,7 +188,7 @@ img {
     width: 30vw;
     font-size: 1.5rem;
   }
-  img {
+  .uploadImage {
     width: 14vh
   }
   .Danger {

@@ -4,6 +4,7 @@ import classes from "./Upload.module.css";
 import config from "./config";
 import { uploadS3 } from "../../util/s3";
 import { v4 as uuidv4 } from "uuid";
+import PSD from 'psd.js';
 
 export default class Upload extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class Upload extends Component {
   }
 
   render() {
+    console.log(PSD);
     let dropZone = (
       <Dropzone
         onDropAccepted={this.onDrop}
@@ -35,6 +37,7 @@ export default class Upload extends Component {
               className={classes.Card}
             >
               <img
+                class={classes.uploadImage}
                 src={`https://image.flaticon.com/icons/svg/1837/1837526.svg`}
                 width={"50px"}
                 alt="uploadIcon"

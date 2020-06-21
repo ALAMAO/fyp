@@ -7,6 +7,7 @@ import {
 import Upload from "./components/Upload/Upload"
 import Output from "./components/Output/Output.jsx"
 import Navbar from "./components/NavBar/NavBar"
+import Preview from './components/Preview/Preview.jsx'
 import './App.css'
 
 export default function App(props) {
@@ -19,6 +20,7 @@ export default function App(props) {
         <Switch>
           <Route path="/output/:imageHash" component={Output} />
           <Route path="/" component={Upload} />
+          <Route path="/preview" component={Preview} />
         </Switch>
       </Router>
     </div>
