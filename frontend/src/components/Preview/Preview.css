@@ -117,3 +117,24 @@ button:focus {
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
+
+#preview-wrapper {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  min-width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#preview > img {
+  max-height: 300px;
+  width:auto;
+}
+
+#left-sidebar {
+  min-width: 200px;
+  height: 500px;
+  background-color: red;
+}

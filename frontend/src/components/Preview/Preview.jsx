@@ -1,18 +1,42 @@
 import React from 'react'
-import axios, { BASE_URL } from '../../Api'
 import './Preview.css'
 import PSD from 'psd.js'
+import { downloadS3 } from '../../util/s3'
 
 class Preview extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {...this.props.location.state,
+      outfile: '',
+      psd: '',
+    }
+  }
+
   componentDidMount() {
-    PSD.fromURL("http://puu.sh/FYLKS/f512c3431d.psd").then(function(psd) {
-      document.getElementById('preview').appendChild(psd.image.toPng());
-    });
+    this.getPsd().then(psdFile => {
+      let psd = new PSD(psdFile.Body)
+      psd.parse()
+      this.setState({
+        psd: psd,
+        outfile: psdFile.Body
+      })
+      document.getElementById('preview').append(psd.image.toPng())
+    })
+  }
+
+  getPsd = async () => {
+    return await downloadS3(this.state.s3Key ?? '')
   }
 
   render() {
     return (
-      <div id="preview"></div>
+      <React.Fragment>
+        <div id="preview-wrapper">
+          <div id="left-sidebar"></div>
+          <div id="preview"></div>
+        </div>
+      </React.Fragment>
     )
   }
 }

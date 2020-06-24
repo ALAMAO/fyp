@@ -27,7 +27,7 @@ export default class Upload extends Component {
         }}
         minSize={1048576 * config.sizeRestrictions.minSizeInMB}
         maxSize={1048576 * config.sizeRestrictions.maxSizeInMB}
-        accept={"image/*"}
+        // accept={"image/*"}
       >
         {({ getRootProps, getInputProps }) => (
           <section>
@@ -131,7 +131,6 @@ export default class Upload extends Component {
 
   onDrop = async (files) => {
     try {
-      let that = this;
       this.setState({ files });
       this.setState({ isLoading: true });
       let file = files[0];
@@ -145,6 +144,7 @@ export default class Upload extends Component {
         s3Location: result.Location,
         s3Key: result.Key,
       });
+      this.props.history.push('/preview', { s3Location: result.Location, s3Key: result.Key })
     } catch (err) {
       console.log(err);
     }
