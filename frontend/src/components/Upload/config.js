@@ -3,7 +3,7 @@ import { BASE_URL } from '../../Api'
 const config = {
   sizeRestrictions: {
     minSizeInMB: 0,
-    maxSizeInMB: 5,
+    maxSizeInMB: 100,
   },
   errorMessages: {
     invalidFileMessage: "Please upload an image file of type jpg, jpeg or png",
