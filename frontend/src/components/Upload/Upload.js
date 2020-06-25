@@ -4,7 +4,6 @@ import classes from "./Upload.module.css";
 import config from "./config";
 import { uploadS3 } from "../../util/s3";
 import { v4 as uuidv4 } from "uuid";
-import PSD from 'psd.js';
 
 export default class Upload extends Component {
   constructor(props) {
@@ -44,7 +43,7 @@ export default class Upload extends Component {
               {/* Creates a break for the words to be on next line */}
               <div className={classes.break}></div>
               <input {...getInputProps()} />
-              <p>Drag and drop a file here</p>
+              <p>Drop PSD files here to upload</p>
               {!!this.state.s3Location && (
                 <p>Previous file URL: {this.state.s3Location}</p>
               )}
@@ -60,8 +59,7 @@ export default class Upload extends Component {
                 <span className={classes.over}>Max File Size: 5MB</span>
               </a>
               <span className={classes.Info}>
-                Max image size: {config.sizeRestrictions.maxSizeInMB}MB.
-                Supported image types: jpg, jpeg or png{" "}
+                ALAMAO
               </span>
             </div>
           </section>

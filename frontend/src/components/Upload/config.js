@@ -10,7 +10,7 @@ const config = {
     fileSizeExceedMessage: (size) => `File is too large. Max size: ${size} MB`,
   },
   uiMessages: {
-    spinnerMessage: `Please Wait While We Classify Your Image`,
+    spinnerMessage: `Please wait while we upload your image.`,
     spinnerEmoji: `🤗`,
   },
   endpoints: {

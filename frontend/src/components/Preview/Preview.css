@@ -23,7 +23,7 @@ button {
   text-decoration: none !important;
   text-transform: none;
   text-transform: capitalize;
-  background-color: #353866;
+  background-color: #222222;
   color: white;
   border: 0 none;
   border-radius: 8px;
@@ -119,22 +119,70 @@ button:focus {
 }
 
 #preview-wrapper {
-  display:flex;
+  display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   height: 100vh;
-  min-width: 80vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 5vh;
 }
 
-#preview > img {
+td {
+  border: 1px black solid;
+}
+
+#preview>img {
   max-height: 300px;
-  width:auto;
+  width: auto;
+  align-self: center;
+}
+
+#preview {
+  width: auto;
+  align-self: center;
 }
 
 #left-sidebar {
-  min-width: 200px;
-  height: 500px;
-  background-color: red;
+  min-width: 20vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#right-article {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  justify-content: flex-start;
+  min-width: 50vw;
+  min-height: 90vh;
+  align-items: center;
+}
+
+img {
+  align-self: center;
+}
+
+.ad-selection {
+  width:7vw;
+  height:25vh;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-selection>h1 {
+  align-self: center;
+  text-align: center;
+}
+
+.ad-selection>img {
+  max-width: 150px;
+  max-height: 150px;
 }
