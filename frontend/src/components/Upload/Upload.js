@@ -59,7 +59,7 @@ export default class Upload extends Component {
                 <span className={classes.over}>Max File Size: 5MB</span>
               </a>
               <span className={classes.Info}>
-                ALAMAO
+                Max PSD file size: {config.sizeRestrictions.maxSizeInMB}MB
               </span>
             </div>
           </section>
